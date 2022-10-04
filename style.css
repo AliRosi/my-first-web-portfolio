@@ -1,0 +1,418 @@
+/*  import google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+/*  header  */
+header {
+    display: inline;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 45px;
+    font-weight: 650;
+    float: left;
+    font-family: 'Sedgwick Ave', cursive;
+    color: white;
+}
+
+.menu {
+    float: right;
+}
+
+/*  nav  */
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    top: 0;
+    background: #4C3575;
+    z-index: 1;
+    border-bottom:1px solid black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*  home  */
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.home {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.kolom {
+  margin: auto 0 auto 50px;
+}
+
+.kolom .deskripsi {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'comic sans ms';
+  color: #371B58;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 75px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #4C3575;
+    width: 100%;
+    line-height: 50px;
+}
+
+.lagu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: slateblue;
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+.lagu img {
+  max-width: 50px;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+a.tbl {
+    display: inline-block;
+    background: #5B4B8A;
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+    margin-top: 23px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #5B4B8A;
+    transition: all 0.3s ease;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+a.tbl:hover {
+    color: #03D8F3;
+    background: none;
+}
+
+/*  about  */
+.about {
+    width: 100%;
+    background-color: #f5f0ff;
+}
+
+.kolom .h2about {
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #371B58;
+    font-family: 'comic sans ms';
+}
+
+.kolom .text {
+  font-size: 18px;
+  font-family: 'comic sans ms';
+  color: black;
+  margin-bottom: 10px;
+}
+
+/*  skills  */
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  z-index:-1;
+  } 
+
+.progress_container {
+  padding: 75px 0px 50px 0px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .progress {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .titlems {
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Sedgwick Ave', cursive;
+    color: #FCEE0C;
+  }
+
+  .progress_item {
+    padding: 0.5rem 0;
+  }
+
+  .progress_title {
+    color: white;
+    padding: 1rem 0;
+    padding-right: 1px;
+    font-size: 22px;
+    font-family: 'Sedgwick Ave', cursive;
+  }
+
+  .progress_bar {
+    position: relative;
+    width: 30rem;
+    height: 8px;
+    border-radius: 2rem;
+    background: white;
+  }
+  
+  @media (max-width: 768px) {
+    .progress_bar {
+      width: 25rem;
+    }
+  }
+  @media (max-width: 440px) {
+    .progress_bar {
+      width: 300px;
+    }
+  }
+  @media (max-width: 340px) {
+    .progress_bar {
+      width: 280px;
+    }
+  }
+  
+  .graph {
+    border-radius: inherit;
+    background: linear-gradient(90deg, #91ffff, #67ffff, #00ffff);
+    position: absolute;
+    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.85, 1);
+    width: 0;
+    height: 100%;
+    left: 0;
+  }
+  
+  .graph::after {
+    content: attr(data-text);
+    position: absolute;
+    right: 0;
+    top: -3rem;
+    width: 4rem;
+    height: 2rem;
+    background: #5B4B8A;
+    font-size: 18px;
+    line-height: 2rem;
+    color: white;
+    text-align: center;
+    border-radius: 0.1rem;
+    animation: text 0.6s ease-in-out;
+    font-weight: bold;
+    font-family: 'Sedgwick Ave', cursive;
+  }
+
+  .graph::before {
+    content: ' ';
+    position: absolute;
+    right: 1rem;
+    top: -1.2rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid white;
+    animation: text 0.6s ease-in-out;
+  }
+  
+  @keyframes text {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes anim{
+    100% { 
+      Stroke-dashoffset:0; 
+    }
+  }
+
+  /*  aside(profile)  */
+  aside {
+    padding: 50px 0;
+    background-color: #d0d0d0;
+  }
+
+  .round {
+    width: 275px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: white;
+  }
+
+  .foto p {
+    padding: 0 100px;
+    font-size: 19px;
+    color: black;
+    font-family: 'comic sans ms';
+  }
+
+  .foto p span {
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .foto {
+    align-items: center ;
+    justify-content: center;
+    display: flex;
+    padding : 20px 0;
+  }
+
+/*  footer - contact  */
+#contact {
+    background: #f5f0ff;
+    padding: 50px 0px 50px 0px;
+}
+
+.contact-section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.contact-address-section {
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #371B58;
+    width: 100%;
+    line-height: 50px;
+}
+
+.contact-address-section p {
+    font-family: 'comic sans ms';
+    color: black;
+}
+
+footer .pftr {
+    padding: 20px;
+    color: white;
+    background-color: #5B4B8A;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+}
+
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+      width: 90%;
+      margin: 0;
+  }
+  .logo a {
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+  nav .menu {
+      width: 100%;
+      margin: 0;
+      position: sticky;
+  }
+  nav .menu ul {
+      text-align: center;
+      margin: auto;
+      line-height: 60px;
+  }
+  nav .menu ul li {
+      display: inline-block;
+      float: none;
+  }
+  section {
+      display: block;
+  }
+  section img {
+      display: block;
+      width: 100%;
+      height: auto;
+  }
+}
+@media (max-width:768px) {
+  .wrapper {
+    vertical-align:middle;
+  }
+}
+@media (max-width: 440px) {
+  .progress_bar {
+    width: 300px;
+  }
+}
+@media (max-width: 340px) {
+  .progress_bar {
+    width: 280px;
+  }
+}
+@media (max-width: 800px) {
+  .foto {
+    display: block;
+    text-align: center;
+  }
+}
